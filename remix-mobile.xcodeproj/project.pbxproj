@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2A771927AF53F800D22B94 /* remix-app in Resources */ = {isa = PBXBuildFile; fileRef = BC2A771827AF53F800D22B94 /* remix-app */; };
 		BC5693C327AF42B5009D0300 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5693C227AF42B5009D0300 /* AppDelegate.m */; };
 		BC5693C627AF42B5009D0300 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5693C527AF42B5009D0300 /* SceneDelegate.m */; };
 		BC5693C927AF42B5009D0300 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5693C827AF42B5009D0300 /* ViewController.m */; };
@@ -14,9 +15,27 @@
 		BC5693CE27AF42B5009D0300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5693CD27AF42B5009D0300 /* Assets.xcassets */; };
 		BC5693D127AF42B5009D0300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5693CF27AF42B5009D0300 /* LaunchScreen.storyboard */; };
 		BC5693D427AF42B5009D0300 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5693D327AF42B5009D0300 /* main.m */; };
+		BC5693DC27AF42E2009D0300 /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5693DB27AF42E2009D0300 /* NodeMobile.framework */; platformFilter = ios; };
+		BC5693DD27AF42E2009D0300 /* NodeMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5693DB27AF42E2009D0300 /* NodeMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC5693E127AF45BA009D0300 /* NodeRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC5693E027AF45BA009D0300 /* NodeRunner.mm */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BC5693DE27AF42E2009D0300 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC5693DD27AF42E2009D0300 /* NodeMobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BC2A771827AF53F800D22B94 /* remix-app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "remix-app"; sourceTree = "<group>"; };
 		BC5693BE27AF42B5009D0300 /* remix-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remix-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5693C127AF42B5009D0300 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC5693C227AF42B5009D0300 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +48,9 @@
 		BC5693D027AF42B5009D0300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC5693D227AF42B5009D0300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5693D327AF42B5009D0300 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC5693DB27AF42E2009D0300 /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NodeMobile.framework; path = libnode/NodeMobile.framework; sourceTree = "<group>"; };
+		BC5693DF27AF4445009D0300 /* NodeRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeRunner.h; sourceTree = "<group>"; };
+		BC5693E027AF45BA009D0300 /* NodeRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NodeRunner.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5693DC27AF42E2009D0300 /* NodeMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +68,10 @@
 		BC5693B527AF42B5009D0300 = {
 			isa = PBXGroup;
 			children = (
+				BC2A771827AF53F800D22B94 /* remix-app */,
 				BC5693C027AF42B5009D0300 /* remix-mobile */,
 				BC5693BF27AF42B5009D0300 /* Products */,
+				BC5693DA27AF42E2009D0300 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +97,18 @@
 				BC5693CF27AF42B5009D0300 /* LaunchScreen.storyboard */,
 				BC5693D227AF42B5009D0300 /* Info.plist */,
 				BC5693D327AF42B5009D0300 /* main.m */,
+				BC5693DF27AF4445009D0300 /* NodeRunner.h */,
+				BC5693E027AF45BA009D0300 /* NodeRunner.mm */,
 			);
 			path = "remix-mobile";
+			sourceTree = "<group>";
+		};
+		BC5693DA27AF42E2009D0300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC5693DB27AF42E2009D0300 /* NodeMobile.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +121,7 @@
 				BC5693BA27AF42B5009D0300 /* Sources */,
 				BC5693BB27AF42B5009D0300 /* Frameworks */,
 				BC5693BC27AF42B5009D0300 /* Resources */,
+				BC5693DE27AF42E2009D0300 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2A771927AF53F800D22B94 /* remix-app in Resources */,
 				BC5693D127AF42B5009D0300 /* LaunchScreen.storyboard in Resources */,
 				BC5693CE27AF42B5009D0300 /* Assets.xcassets in Resources */,
 				BC5693CC27AF42B5009D0300 /* Main.storyboard in Resources */,
@@ -146,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5693E127AF45BA009D0300 /* NodeRunner.mm in Sources */,
 				BC5693C927AF42B5009D0300 /* ViewController.m in Sources */,
 				BC5693C327AF42B5009D0300 /* AppDelegate.m in Sources */,
 				BC5693D427AF42B5009D0300 /* main.m in Sources */,
@@ -226,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -279,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +332,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3WAMFL22L4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libnode",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "remix-mobile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,6 +364,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3WAMFL22L4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libnode",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "remix-mobile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

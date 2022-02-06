@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NodeRunner.h"
 
 @interface AppDelegate ()
 
@@ -13,10 +14,30 @@
 
 @implementation AppDelegate
 
+- (void)startNode {
+    NSString* servePath = [[NSBundle mainBundle] pathForResource:@"remix-app/node_modules/.bin/remix-serve" ofType:@""];
+    NSString* buildPath = [[NSBundle mainBundle] pathForResource:@"remix-app/build" ofType:@""];
+    NSArray* nodeArguments = [NSArray arrayWithObjects:
+                                @"node",
+                                servePath,
+                                buildPath,
+                                nil
+                                ];
+    [NodeRunner startEngineWithArguments:nodeArguments];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+    NSThread* nodejsThread = nil;
+        nodejsThread = [[NSThread alloc]
+            initWithTarget:self
+            selector:@selector(startNode)
+            object:nil
+        ];
+        // Set 2MB of stack space for the Node.js thread.
+        [nodejsThread setStackSize:2*1024*1024];
+        [nodejsThread start];
+        return YES;
 }
 
 

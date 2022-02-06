@@ -1,0 +1,26 @@
+diff --git a/node_modules/@remix-run/node/errors.js b/node_modules/@remix-run/node/errors.js
+index 503e585..6a84115 100644
+--- a/node_modules/@remix-run/node/errors.js
++++ b/node_modules/@remix-run/node/errors.js
+@@ -13,7 +13,7 @@
+ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+ var fs = require('fs');
+-var fsp = require('fs/promises');
++var fsp = require('fs').promises;
+ var path = require('path');
+ var sourceMap = require('source-map');
+ 
+diff --git a/node_modules/@remix-run/node/upload/fileUploadHandler.js b/node_modules/@remix-run/node/upload/fileUploadHandler.js
+index 12919a8..78d13fa 100644
+--- a/node_modules/@remix-run/node/upload/fileUploadHandler.js
++++ b/node_modules/@remix-run/node/upload/fileUploadHandler.js
+@@ -14,7 +14,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+ var crypto = require('crypto');
+ var fs = require('fs');
+-var fsp = require('fs/promises');
++var fsp = require('fs').promises;
+ var os = require('os');
+ var path = require('path');
+ var meter = require('./meter.js');
